@@ -2,12 +2,33 @@
 // Each section corresponds to a sidebar module from the EduPay app
 // question / description are resolved via i18n (tQuestion(id)) from locale files
 // duration is read dynamically from the video file metadata (useVideoDuration hook)
+// Icons use @heroicons/react/24/outline components
+
+import {
+  ChartBarIcon,
+  BuildingLibraryIcon,
+  AcademicCapIcon,
+  ClipboardDocumentListIcon,
+  BanknotesIcon,
+  CreditCardIcon,
+  DocumentTextIcon,
+  PresentationChartLineIcon,
+  ChartPieIcon,
+  BuildingStorefrontIcon,
+  CalendarDaysIcon,
+  Cog6ToothIcon,
+  CalendarIcon,
+  TagIcon,
+  ShieldCheckIcon,
+  KeyIcon,
+  DocumentMagnifyingGlassIcon,
+} from '@heroicons/react/24/solid';
 
 export const sidebarSections = [
   {
     id: 'dashboard',
     title: 'Tableau de Bord',
-    icon: '📊',
+    icon: ChartBarIcon,
     isTopLevel: true,
     questions: [
       {
@@ -20,12 +41,12 @@ export const sidebarSections = [
   {
     id: 'gestion-scolaire',
     title: 'Gestion Scolaire',
-    icon: '🏫',
+    icon: BuildingLibraryIcon,
     items: [
       {
         id: 'eleves',
         label: 'Élèves',
-        icon: '🎓',
+        icon: AcademicCapIcon,
         badge: 3, // questions.length
         questions: [
           {
@@ -48,7 +69,7 @@ export const sidebarSections = [
       {
         id: 'inscriptions',
         label: 'Inscriptions',
-        icon: '📋',
+        icon: ClipboardDocumentListIcon,
         badge: 1, // questions.length
         questions: [
           {
@@ -63,12 +84,12 @@ export const sidebarSections = [
   {
     id: 'finances',
     title: 'Finances',
-    icon: '💰',
+    icon: BanknotesIcon,
     items: [
       {
         id: 'paiements',
         label: 'Paiements',
-        icon: '💳',
+        icon: CreditCardIcon,
         badge: 3, // questions.length
         questions: [
           {
@@ -91,7 +112,7 @@ export const sidebarSections = [
       {
         id: 'depenses',
         label: 'Dépenses',
-        icon: '📝',
+        icon: DocumentTextIcon,
         badge: 1, // questions.length
         questions: [
           {
@@ -106,12 +127,12 @@ export const sidebarSections = [
   {
     id: 'crm',
     title: 'CRM',
-    icon: '📈',
+    icon: PresentationChartLineIcon,
     items: [
       {
         id: 'analyse-paiements',
         label: 'Analyse des paiements',
-        icon: '📊',
+        icon: ChartPieIcon,
         questions: [
           {
             id: 'analyse-charts',
@@ -123,7 +144,7 @@ export const sidebarSections = [
       {
         id: 'frais-restauration',
         label: 'Frais de restauration',
-        icon: '🍽️',
+        icon: BuildingStorefrontIcon,
         questions: [
           {
             id: 'restauration-config',
@@ -135,7 +156,7 @@ export const sidebarSections = [
       {
         id: 'rapport-mensualites',
         label: 'Rapport des mensualités',
-        icon: '📅',
+        icon: CalendarDaysIcon,
         questions: [
           {
             id: 'mensualites-report',
@@ -149,12 +170,12 @@ export const sidebarSections = [
   {
     id: 'parametres',
     title: 'Paramètres',
-    icon: '⚙️',
+    icon: Cog6ToothIcon,
     items: [
       {
         id: 'annees-scolaires',
         label: 'Années Scolaires & Tranches',
-        icon: '📆',
+        icon: CalendarIcon,
         badge: 1, // questions.length
         questions: [
           {
@@ -167,7 +188,7 @@ export const sidebarSections = [
       {
         id: 'remises',
         label: 'Remises',
-        icon: '🏷️',
+        icon: TagIcon,
         badge: 1, // questions.length
         questions: [
           {
@@ -180,7 +201,7 @@ export const sidebarSections = [
       {
         id: 'parametres-general',
         label: 'Paramètres',
-        icon: '⚙️',
+        icon: Cog6ToothIcon,
         questions: [
           {
             id: 'settings-school',
@@ -194,12 +215,12 @@ export const sidebarSections = [
   {
     id: 'securite',
     title: 'Sécurité',
-    icon: '🔒',
+    icon: ShieldCheckIcon,
     items: [
       {
         id: 'roles-permissions',
         label: 'Rôles & Permissions',
-        icon: '🔑',
+        icon: KeyIcon,
         questions: [
           {
             id: 'roles-permissions-manage',
@@ -211,7 +232,7 @@ export const sidebarSections = [
       {
         id: 'journaux-activite',
         label: "Journaux d'activité",
-        icon: '📜',
+        icon: DocumentMagnifyingGlassIcon,
         badge: 1, // questions.length
         questions: [
           {

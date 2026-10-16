@@ -2,6 +2,7 @@
 
 import { useLanguage } from '../i18n/LanguageContext';
 import { useVideoDuration } from '../hooks/useVideoDuration';
+import { PlayCircleIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 
 /**
  * Renders a single question card with the video duration loaded
@@ -20,7 +21,9 @@ function QuestionCard({ question, index, onQuestionClick }) {
       id={`question-card-${question.id}`}
       style={{ animationDelay: `${index * 0.05}s` }}
     >
-      <div className="question-play">▶</div>
+      <div className="question-play">
+        <PlayCircleIcon style={{ width: 28, height: 28 }} />
+      </div>
       <div className="question-info">
         <h3>{transQ.question}</h3>
         <p>{transQ.description}</p>
@@ -36,7 +39,9 @@ export default function QuestionList({ questions, title, subtitle, onQuestionCli
   if (!questions || questions.length === 0) {
     return (
       <div className="empty-state" id="empty-state">
-        <div className="empty-state-icon">🔍</div>
+        <div className="empty-state-icon">
+        <MagnifyingGlassIcon style={{ width: 40, height: 40 }} />
+      </div>
         <p className="empty-state-text">{t.noQuestions}</p>
       </div>
     );

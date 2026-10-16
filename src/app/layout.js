@@ -2,7 +2,7 @@ import './globals.css';
 import { LanguageProvider } from './i18n/LanguageContext';
 
 export const metadata = {
-  title: 'EduPay Documentation - Guide Interactif',
+  title: 'EduPay Documentation22 - Guide Interactif',
   description:
     'Documentation interactive de l\'application EduPay avec des tutoriels vidéo pour la gestion scolaire, les finances, le CRM, les paramètres et la sécurité.',
   keywords: ['EduPay', 'documentation', 'gestion scolaire', 'paiements', 'tutoriel', 'vidéo'],

@@ -1,8 +1,16 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import Image from 'next/image';
 import { sidebarSections, getTotalQuestions, getTotalModules } from '../data/questions';
 import { useLanguage } from '../i18n/LanguageContext';
+import logo from '../logo.png';
+import {
+  MagnifyingGlassIcon,
+  ChevronDownIcon,
+  ChevronUpIcon,
+} from '@heroicons/react/24/outline';
+
 
 export default function Sidebar({ activeItem, onItemClick, onQuestionClick }) {
   const [collapsedSections, setCollapsedSections] = useState({});
@@ -98,7 +106,7 @@ export default function Sidebar({ activeItem, onItemClick, onQuestionClick }) {
       {/* Logo / Header */}
       <div className="sidebar-header">
         <div className="sidebar-logo">
-          <div className="logo-icon">E</div>
+          <Image src={logo} alt="EduPay" width={36} height={36} style={{ flexShrink: 0, borderRadius: 8 }} />
           <div className="logo-text">
             <span className="logo-title">{t.appName}</span>
             <span className="logo-subtitle">{t.appSubtitle}</span>
@@ -109,7 +117,7 @@ export default function Sidebar({ activeItem, onItemClick, onQuestionClick }) {
       {/* Search */}
       <div className="sidebar-search">
         <div className="search-wrapper">
-          <span className="search-icon">🔍</span>
+          <MagnifyingGlassIcon className="search-icon" style={{ width: 16, height: 16, flexShrink: 0 }} />
           <input
             type="text"
             className="search-input"
@@ -133,7 +141,7 @@ export default function Sidebar({ activeItem, onItemClick, onQuestionClick }) {
                   id={`nav-${section.id}`}
                   style={{ padding: '11px 20px', marginBottom: '4px' }}
                 >
-                  <span className="nav-item-icon">{section.icon}</span>
+                  {section.icon && <section.icon className="nav-item-icon" style={{ width: 18, height: 18, flexShrink: 0 }} />}
                   <span className="nav-item-text" style={{ fontWeight: 500 }}>
                     {tSection(section.id)}
                   </span>
@@ -143,7 +151,9 @@ export default function Sidebar({ activeItem, onItemClick, onQuestionClick }) {
                       onClick={(e) => toggleItemQuestions(section.id, e)}
                       title="Voir les questions"
                     >
-                      {expandedItems[section.id] ? '▴' : '▾'}
+                      {expandedItems[section.id]
+                        ? <ChevronUpIcon style={{ width: 14, height: 14 }} />
+                        : <ChevronDownIcon style={{ width: 14, height: 14 }} />}
                     </span>
                   )}
                 </div>
@@ -174,7 +184,11 @@ export default function Sidebar({ activeItem, onItemClick, onQuestionClick }) {
               <>
                 <div className="nav-section-header" onClick={() => toggleSection(section.id)}>
                   <span className="nav-section-title">{tSection(section.id)}</span>
-                  <span className={`nav-section-chevron ${collapsedSections[section.id] ? 'collapsed' : ''}`}>▾</span>
+                  <span className={`nav-section-chevron ${collapsedSections[section.id] ? 'collapsed' : ''}`}>
+                    {collapsedSections[section.id]
+                      ? <ChevronDownIcon style={{ width: 14, height: 14 }} />
+                      : <ChevronUpIcon style={{ width: 14, height: 14 }} />}
+                  </span>
                 </div>
 
                 <div className={`nav-section-items ${collapsedSections[section.id] ? 'collapsed' : ''}`}>
@@ -186,7 +200,7 @@ export default function Sidebar({ activeItem, onItemClick, onQuestionClick }) {
                         onClick={() => onItemClick(item.id)}
                         id={`nav-${item.id}`}
                       >
-                        <span className="nav-item-icon">{item.icon}</span>
+                        {item.icon && <item.icon className="nav-item-icon" style={{ width: 18, height: 18, flexShrink: 0 }} />}
                         <span className="nav-item-text">{tItem(item.id)}</span>
                         {item.badge !== undefined && <span className="nav-item-badge">{item.badge}</span>}
                         {item.questions?.length > 0 && (
@@ -195,7 +209,9 @@ export default function Sidebar({ activeItem, onItemClick, onQuestionClick }) {
                             onClick={(e) => toggleItemQuestions(item.id, e)}
                             title="Voir les questions"
                           >
-                            {expandedItems[item.id] ? '▴' : '▾'}
+                            {expandedItems[item.id]
+                              ? <ChevronUpIcon style={{ width: 14, height: 14 }} />
+                              : <ChevronDownIcon style={{ width: 14, height: 14 }} />}
                           </span>
                         )}
                       </div>
