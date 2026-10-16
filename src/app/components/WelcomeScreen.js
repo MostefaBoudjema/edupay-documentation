@@ -7,7 +7,6 @@ export default function WelcomeScreen() {
   const { t } = useLanguage();
   return (
     <div className="welcome-container" id="welcome-screen">
-      <div className="welcome-icon">📚</div>
       <h1 className="welcome-title">{t.welcomeTitle}</h1>
       <p className="welcome-subtitle">
         {t.welcomeSubtitle}

@@ -23,8 +23,6 @@ export default function Header({ sectionTitle, itemLabel }) {
           ☰
         </button>
         <nav className="breadcrumb" id="breadcrumb">
-          <span>📚</span>
-          <span className="breadcrumb-separator">›</span>
           <span>{t.breadcrumbHome}</span>
           {sectionTitle && (
             <>
