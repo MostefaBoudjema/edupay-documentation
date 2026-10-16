@@ -88,6 +88,10 @@ const en = {
   // Questions
   q: {
     // Élèves
+    'eleves-list': {
+      question: 'How to view the student list?',
+      description: 'Browse the full list of enrolled students with their basic information and status.',
+    },
     'eleves-add': {
       question: 'How to add a new student?',
       description: 'Step-by-step guide to enroll a new student in the EduPay system.',
@@ -153,6 +157,10 @@ const en = {
       question: 'How to generate a payment receipt?',
       description: 'Create and print payment receipts for parents.',
     },
+    'paiements-invoice': {
+      question: 'How to generate an invoice?',
+      description: 'Create detailed invoices for tuition payments and other fees.',
+    },
     // Impayés
     'impayes-list': {
       question: 'How to identify students with unpaid fees?',
@@ -193,6 +201,10 @@ const en = {
       description: "Compare revenues and expenses to assess the institution's financial health.",
     },
     // Paramètres
+    'annees-tranches': {
+      question: 'How to configure school years and payment installments?',
+      description: 'Create a new school year and define payment schedules with amounts and due dates.',
+    },
     'annees-create': {
       question: 'How to create a new school year?',
       description: 'Set up a new school year with its dates and parameters.',
@@ -226,6 +238,10 @@ const en = {
       description: 'Manage SMS, email and WhatsApp notifications for parents and staff.',
     },
     // Sécurité
+    'roles-permissions-manage': {
+      question: 'How to manage roles and permissions?',
+      description: 'Define user roles and configure access permissions for each module of the application.',
+    },
     'permissions-manage': {
       question: 'How to manage permissions?',
       description: 'Configure access permissions for each module of the application.',

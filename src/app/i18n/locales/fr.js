@@ -90,6 +90,10 @@ const fr = {
   // Questions
   q: {
     // Élèves
+    'eleves-list': {
+      question: 'Comment consulter la liste des élèves ?',
+      description: 'Explorez la liste complète des élèves inscrits, avec leurs informations de base et leur statut.',
+    },
     'eleves-add': {
       question: 'Comment ajouter un nouvel élève ?',
       description: "Guide étape par étape pour inscrire un nouvel élève dans le système EduPay.",
@@ -155,6 +159,10 @@ const fr = {
       question: 'Comment générer un reçu de paiement ?',
       description: 'Créez et imprimez des reçus de paiement pour les parents.',
     },
+    'paiements-invoice': {
+      question: 'Comment générer une facture ?',
+      description: 'Créez des factures détaillées pour les paiements de scolarité et autres frais.',
+    },
     // Impayés
     'impayes-list': {
       question: 'Comment identifier les élèves avec des impayés ?',
@@ -195,6 +203,10 @@ const fr = {
       description: "Comparez les recettes et dépenses pour évaluer la santé financière de l'établissement.",
     },
     // Paramètres
+    'annees-tranches': {
+      question: 'Comment configurer les années scolaires et les tranches de paiement ?',
+      description: "Créez une nouvelle année scolaire et définissez les échéanciers de paiement avec montants et dates limites.",
+    },
     'annees-create': {
       question: 'Comment créer une nouvelle année scolaire ?',
       description: 'Configurez une nouvelle année scolaire avec ses dates et paramètres.',
@@ -228,6 +240,10 @@ const fr = {
       description: 'Gérez les notifications SMS, email et WhatsApp pour les parents et le personnel.',
     },
     // Sécurité
+    'roles-permissions-manage': {
+      question: 'Comment gérer les rôles et permissions ?',
+      description: "Définissez des rôles utilisateurs et configurez les permissions d'accès pour chaque module de l'application.",
+    },
     'permissions-manage': {
       question: 'Comment gérer les permissions ?',
       description: "Configurez les permissions d'accès pour chaque module de l'application.",
