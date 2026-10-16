@@ -1,5 +1,6 @@
 import './globals.css';
 import { LanguageProvider } from './i18n/LanguageContext';
+import WhatsAppButton from './components/WhatsAppButton';
 
 export const metadata = {
   title: 'EduPay Documentation22 - Guide Interactif',
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
         <LanguageProvider>
           {children}
         </LanguageProvider>
+        <WhatsAppButton />
       </body>
     </html>
   );
